@@ -1,0 +1,21 @@
+
+      <div class="container">
+        <div class="row">
+          <div class="mx-auto">
+            <h1>Welcom to Books!!</h1>
+            <p>in Booksers.</p>
+            <p>you can share and exchange your opinions,inpressions,and emotions</p>
+            <p>about various books!</p>
+            <div class="d-grid gap-2 col-10 mx-auto">
+                <div class="row">
+                    <button class="btn btn-info btn-block" type="button">
+                        <%= link_to "Log in", new_user_session_path, class: 'text-white btn btn-info btn-block' %>
+                    </button>
+                    <button class="btn btn-success btn-block" type="button">
+                        <%= link_to "Sign up", new_user_registration_path, class: 'text-white btn btn-success btn-block' %>
+                    </button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
