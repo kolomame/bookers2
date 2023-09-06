@@ -3,7 +3,7 @@
     <div>
       <h1>User info</h1>
       <div>
-        <%= image_tag @user_new.get_profile_image(100,100) %>
+        <%= image_tag user_new.get_profile_image(100,100) %>
       </div>
       <table>
         <tr>
@@ -11,7 +11,7 @@
             name
           </th>
           <td>
-            <%= @user_new.name %>
+            <%= user_new.name %>
           </td>
         </tr>
         <tr>
@@ -19,16 +19,19 @@
             introduction
           </th>
           <td>
-            <%= @user_new.introduction %>
+            <%= user_new.introduction %>
           </td>
         </tr>
       </table>
+      <div>
+        <%= link_to 'edit', edit_user_path(current_user), class: "btn btn-success" %>
+      </div>
     </div>
   </div>
   <div class="row">
     <div>
       <h1>New book</h1>
-      <%= form_with model: @book_new do |f| %>
+      <%= form_with model: book_new do |f| %>
         <div class="field">
           <%= f.label :title %><br>
           <%= f.text_field :title %>
