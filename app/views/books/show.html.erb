@@ -7,9 +7,9 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3">
-      <%= render 'new', book_new: @book_new, user_new: @user_new, users: @users %>
+      <%= render 'new', book_new: @book_new, user_new: @user_new %>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-8 offset-md-1">
       <h1>Book detail</h1>
       <table class="table">
         <tbody>
@@ -19,7 +19,7 @@
             <td><%= @book.body %></td>
             <% if @book.user == current_user %>
               <td><%= link_to 'Edit', edit_book_path(@book) , class: 'btn btn-success' %></td>
-              <td><%= link_to 'Destroy', books_path(@book) , class: 'btn btn-danger' %></td>
+              <td><%= link_to 'Destroy', book_path(@book) ,method: :delete, class: 'btn btn-danger' %></td>
             <% end %>
           </tr>
         </tbody>
