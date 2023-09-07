@@ -3,15 +3,15 @@
     <div>
       <h1>User info</h1>
       <div>
-        <%= image_tag user_new.get_profile_image(100,100) %>
+        <%= image_tag @user.get_profile_image(100,100) %>
       </div>
-      <table>
+      <table class="table">
         <tr>
           <th>
             name
           </th>
           <td>
-            <%= user_new.name %>
+            <%= @user.name %>
           </td>
         </tr>
         <tr>
@@ -19,12 +19,12 @@
             introduction
           </th>
           <td>
-            <%= user_new.introduction %>
+            <%= @user.introduction %>
           </td>
         </tr>
       </table>
       <div>
-        <%= link_to 'edit', edit_user_path(current_user), class: "btn btn-success" %>
+        <%= link_to 'edit', edit_user_path(@user), class: "btn btn-success" %>
       </div>
     </div>
   </div>
