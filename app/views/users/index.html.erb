@@ -4,7 +4,10 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3">
-      <%= render 'books/new', book_new: @book_new, user_new: @user_new %>
+      <h2>User info</h2>
+      <%= render 'info', user: current_user %>
+      <h2>New book</h2>
+      <%= render 'books/new', book: @book %>
     </div>
     <div class="col-md-8 offset-md-1">
       <h1>Users</h1>
